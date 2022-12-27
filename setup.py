@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'counter = pub_sub.counter:main'
+            'counter = pub_sub.counter:main',
+            'listener = pub_sub.listener:main'
         ],
     },
 )
