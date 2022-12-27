@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from std_msgs.msg import Int32
 
 class CounterNode(Node):
 
@@ -8,6 +9,12 @@ class CounterNode(Node):
 
         self.counter = 0
 
+        self.pub = self.create_publisher(
+            Int32,
+            '/count',
+            10
+        )
+
         self.create_timer(
             1.0, 
             self.execute     
@@ -15,6 +22,10 @@ class CounterNode(Node):
     
     def execute(self):
         self.counter += 1
+
+        msg = Int32()
+        msg.data = self.counter
+        self.pub.publish(msg)
 
 
 def main(args=None):
