@@ -15,7 +15,6 @@ class CounterNode(Node):
     
     def execute(self):
         self.counter += 1
-        self.get_logger().info(str(self.counter))
 
 
 def main(args=None):
