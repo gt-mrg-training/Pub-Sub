@@ -31,13 +31,13 @@ Counter Node:
 
 `ros2 topic echo /count`
 
-
+Listener Node:
 
 `ros2 run pub_sub listener`
 
 `rqt_graph`
 
-
+Turtle Sim:
 
 `ros2 run turtlesim turtlesim_node`
 
@@ -49,6 +49,7 @@ Counter Node:
 
 `ros2 topic echo /turtle1/cmd_vel`
 
+Launch Files
 
 `ros2 launch pub_sub main.launch.py`
 
